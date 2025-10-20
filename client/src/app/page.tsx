@@ -1,7 +1,7 @@
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <h1 className="text-red-500">AFYA</h1>
-  );
+  redirect("/login");
+  return null;
 }
