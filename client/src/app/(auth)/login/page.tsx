@@ -56,7 +56,7 @@ export default function LoginPage() {
             <h1 className="text-xl text-white font-bold font-serif mt-4">YOUR HEALTH , OUR CONCERN</h1>
           </div>
         </div>
-        <div className="w-1/2 h-full z-[100] relativeflex flex-col gap-1 relative">
+        <div className="w-1/2 h-full z-[100] relativeflex flex-col gap-1 relative bg-white">
           <div className="absolute w-52 rounded-l-[80px] top-0 bottom-0 bg-white -left-32 z-[100]"></div>
           <div className="absolute w-full h-full top-[10px] z-[100] -left-[500px]">
           <div className="w-[700px] h-[700px] relative">
