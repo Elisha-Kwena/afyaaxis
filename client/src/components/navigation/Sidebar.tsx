@@ -74,9 +74,9 @@ export default function Sidebar(){
                                   />
                               </div>
                               <span className={`font-bold capitalize group-hover:text-green-400 transition-all duration-300 ease-in-out ${isOpen ? "visible":"hidden"} ${pathname === link.href ? " text-green-400":"text-white"}`}>{link.label}</span>
-                              <div className={`absolute transition-all duration-300 ease-in-out flex items-center justify-start left-[130%] w-[150px] h-full p-2 rounded-md ${isOpen ? "hidden":"visible"} group-hover:shadow ${pathname ===  link.href ?"shadow":""}`}>
-                                <span className={`font-bold capitalize group-hover:text-green-400 transition-all duration-300 ease-in-out  ${pathname === link.href ? "text-green-400" : "text-white"}`}>{ link.label}</span>
-                              </div>
+                               <div className={`absolute transition-all duration-300 ease-in-out flex items-center justify-start left-[130%] w-[150px] h-full p-2 rounded-md group-hover:shadow ${pathname ===  link.href?"shadow":""} ${isOpen ?"hidden ":"visible opacity-0 group-hover:opacity-100 group-hover:bg-white"}`}>
+                                <span className={`font-bold capitalize group-hover:text-green-400 transition-all duration-300 ease-in-out  ${pathname === link.href ? "text-green-400" : "text-white"}`}>{link.label}</span>
+                            </div>
                           </Link>
                       ))}
                   </div>
