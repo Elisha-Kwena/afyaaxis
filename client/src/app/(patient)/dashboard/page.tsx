@@ -78,30 +78,34 @@ export default function DashBoard() {
         <div>
           {/* Upcoming Appointments Section */}
           <div className="mt-5 ">
-            <h1 className="text-black text-2xl p-2 font-semibold mb-2">
+            <h1 className="text-black text-2xl p-2 font-semibold">
               Upcoming Appointments
             </h1>
           </div>
-          <div className="bg-white shadow-md rounded flex flex-col-2 ">
+          <div className="bg-white shadow rounded flex flex-col-2 ">
             {/* Appointment List Placeholder */}
-            <div className="w-full p-2 ">
-              <h1 className="text-black text-lg p-1 font-medium ">
-                Dr. sarah lee , cardiologist - oct 20,2025 3:00 PM (virtual){" "}
-              </h1>
+            <div className="w-full flex items-center justify-between">
+              <div>
+                <h1 className="text-black text-lg p-1 font-medium ">
+                  Dr. sarah lee , cardiologist - oct 20,2025 3:00 PM (virtual){" "}
+                </h1>
+              </div>
+              <div className="flex  p-4 items-center font-bold ">
+                <Link href="#">
+                  <p className="text-blue-700 mr-4">JoinCall</p>
+                </Link>
+                <Link href="#">
+                  <p className="text-blue-700 mr-4">Reschedule</p>
+                </Link>
+                <div>
+                  <button className="text-red-500">cancel</button>
+                </div>
+              </div>
+            </div>
+            <div className="w-full mt-2">
               <button className="bg-black text-white py-2 px-4 rounded-full shadow-md hover:bg-blue-600 mt-3">
                 View all Appointments
               </button>
-            </div>
-            <div className="flex  p-4 items-center font-bold ">
-              <Link href="#">
-                <p className="text-blue-700 mr-4">JoinCall</p>
-              </Link>
-              <Link href="#">
-                <p className="text-blue-700 mr-4">Reschedule</p>
-              </Link>
-              <div>
-                <button className="text-red-500">cancel</button>
-              </div>
             </div>
           </div>
         </div>
