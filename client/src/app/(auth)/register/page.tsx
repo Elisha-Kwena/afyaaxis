@@ -7,7 +7,7 @@ import ContactMailRoundedIcon from '@mui/icons-material/ContactMailRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import VisibilityRoundedIcon from '@mui/icons-material/VisibilityRounded';
 import VisibilityOffRoundedIcon from '@mui/icons-material/VisibilityOffRounded';
-export default function LoginPage() {
+export default function RegisterPage() {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
@@ -76,7 +76,7 @@ export default function LoginPage() {
           </div>
           <div className="w-full flex items-center justify-center h-full">
             <div className="w-[70%]">
-              <h1 className="text-left font-serif text-black font-extrabold text-[24px]">Welcome Back</h1>
+              <h1 className="text-left font-serif text-black font-extrabold text-[24px]">Create account</h1>
               <div className="mt-2 w-full">
                 <button className="w-full flex cursor-pointer hover:shadow-xl transition-all duration-300 ease-in-out shadow-inner border border-gray-200 p-2 rounded-full items-center justify-center gap-2">
                   <div className="w-8 h-8 relative">
@@ -96,6 +96,17 @@ export default function LoginPage() {
                 <div className="w-4 h-1 bg-gray-700"></div>
               </div>
               <form action="" className="w-full flex flex-col gap-4 mt-4">
+                <div className="w-full flex items-center justify-between border rounded-md pr-2">
+                  <input 
+                  name="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                  required
+                  type="text" 
+                  className="w-[80%] p-3 font-serif focus:outline-none text-black " 
+                  placeholder="Full Name : "/>
+                  <ContactMailRoundedIcon className="!text-[24px]"/>
+                </div>
                 <div className="w-full flex items-center justify-between border rounded-md pr-2">
                   <input 
                   name="email"
@@ -129,12 +140,32 @@ export default function LoginPage() {
                   {showPassword.password ? <VisibilityOffRoundedIcon className='text-black !text-[20px]' /> : <VisibilityRoundedIcon className='text-black  !text-[20px]'/>}
                 </button>
               </div>
+
+              <div className="w-full flex items-center justify-between rounded-md pr-2 relative border">
+                <input
+                  name="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  id="confirmPassword"
+                  required
+                  placeholder="Confirm Password : "
+                  type={showPassword.confirmPassword ? 'text' : 'password'}
+                  className="w-[80%] p-3 font-serif focus:outline-none text-black "
+                />
+                <button
+                  type="button"
+                  className="visibility-btn absolute translate-y-0 text-white font-bold font-fira-code right-2"
+                  onClick={() => togglePasswordVisibility('confirmPassword')}
+                >
+                  {showPassword.confirmPassword ? <VisibilityOffRoundedIcon className='text-black !text-[20px]' /> : <VisibilityRoundedIcon className='text-black !text-[20px]' />}
+                </button>
+              </div>
                 <div className="w-full mt-3">
-                  <button type='submit' className="w-full p-3 text-center text-white font-bold font-serif rounded-full bg-green-500 text-xl">Login</button>
+                  <button type='submit' className="w-full p-3 text-center text-white font-bold font-serif rounded-full bg-green-500 text-xl">Create Account</button>
                 </div>
                 <div className="flex w-full items-center justify-start gap-3 mt-3">
-                  <p className="font-serif text-lg text-gray-500">Don't have an account ? </p>
-                  <Link href="/" className="text-blue-600 font-bold hover:text-red-600 hover:underline">Register</Link>
+                  <p className="font-serif text-lg text-gray-500">Already have an account ? </p>
+                  <Link href="/login" className="text-blue-600 font-bold hover:text-red-600 hover:underline">Login</Link>
                 </div>
               </form>
             </div>
