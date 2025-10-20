@@ -7,7 +7,7 @@ export default function Navbar(){
     const {isOpen} = useSidebar()
     return(
         <>
-        <header className={`flex rounded-md h-[50px] p-2 fixed top-2  right-1 shadow bg-white ${isOpen?"left-[306px]":"left-[61px]"}`}>
+        <header className={`flex rounded-md h-[50px] p-2 fixed top-2  right-1 shadow bg-white transition-all duration-300 ease-in-out ${isOpen?"left-[306px]":"left-[61px]"}`}>
             <nav className="w-full flex items-center justify-between">
                 <div className="flex items-center justify-start gap-8">
                     <div className="flex items-center justify-start gap-2">
