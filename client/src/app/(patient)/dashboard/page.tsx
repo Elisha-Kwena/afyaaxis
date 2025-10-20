@@ -77,7 +77,7 @@ export default function DashBoard() {
         </div>
         <div>
           {/* Upcoming Appointments Section */}
-          <div className="mt-5 border">
+          <div className="mt-5 ">
             <h1 className="text-black text-2xl p-2 font-semibold mb-2">
               Upcoming Appointments
             </h1>
