@@ -1,4 +1,4 @@
-
+"use client"
 import { useSidebar } from "@/contexts/SidebarContext"
 import Navbar from "@/components/navigation/Navbar"
 export default function DashBoard(){
