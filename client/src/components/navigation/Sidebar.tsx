@@ -1,13 +1,80 @@
 "use client"
 import { useSidebar } from "@/contexts/SidebarContext"
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { navbarlinks } from "@/constants/Navconstants"
 export default function Sidebar(){
     const {isOpen} = useSidebar()
+    const pathname = usePathname()
     return(
         <>
-    <aside
-      className={`fixed top-1 rounded-md p-2 bg-red-500 left-1 bottom-1 w-[300px] text-white transform  ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out md:w-[300px] md:translate-x-0 z-20`}>
-      
-    </aside>
+            <aside className={`fixed flex flex-col gap-1 top-1 rounded-md p-2 bg-green-500 left-1 bottom-1 text-white transform transition-all duration-500 ease-in-out ${isOpen ? 'translate-x-0 w-[300px]' : '-translate-x-full w-[55px]'} md:translate-x-0 z-20`}>
+              <div className="top w-full flex items-start justify-start gap-1">
+                  <div className="w-16 h-16 relative flex items-cente">
+                      <Image
+                          src="/icons/logo-white.png"
+                          alt="afyaaxis logo"
+                          fill
+                          className="object-contain object-center"
+                      />
+                  </div>
+                  <h1 className={`text-blue-500 text-[38px] font-serif transition-all duration-300 ease-in-out ${isOpen?"visible":"hidden"}`}>fyaAxis</h1>
+              </div>
+                <div className="w-full h-full flex flex-col items-center justify-between">
+                  <div className="w-full flex flex-col gap-1">
+                    {navbarlinks.slice(0, 10).map((link, index) => {
+                      // Special case for index 9 (user profile)
+                      const isUserProfile = index === 9;
+                      const username = "elisha kwena";
+                      const profile = "/images/user.jpg";
+                      
+                      return (
+                        <Link 
+                          key={index} 
+                          href={isUserProfile ? username : link.href} 
+                          className={`relative group w-full flex items-center gap-2 p-2 rounded-md hover:bg-white transition-all duration-300 ease-in-out ${isOpen?"justify-start":"justify-center"} ${
+                            pathname === (isUserProfile ? "/" : link.href) 
+                              ? "bg-white text-green-400" 
+                              : "bg-transparent text-white"
+                          }`}
+                        >
+                          <div className={`w-8 h-8 relative ${isUserProfile ?"rounded-full overflow-hidden":""}`}>
+                            <Image
+                              src={isUserProfile ? profile : link.icon.src}
+                              alt={isUserProfile ? "User profile" : "link icon"}
+                              fill
+                              className={`object-center ${isUserProfile ? "object-cover":"object-contain"}`} 
+                            />
+                          </div>
+                          <span className={`font-bold capitalize group-hover:text-green-400 transition-all duration-300 ease-in-out ${isOpen ? "visible":"hidden"} ${
+                            pathname === (isUserProfile ? "/" : link.href) 
+                              ? "text-green-400" 
+                              : "text-white"
+                          }`}>
+                            {isUserProfile ? username : link.label}
+                          </span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                  <div className="w-full flex flex-col gap-1">
+                      {navbarlinks.slice(10).map((link,index)=>(
+                          <Link key={index} href={link.href} className={`relative group w-full flex items-center gap-2 p-2 rounded-md hover:bg-white transition-all duration-300 ease-in-out ${isOpen?"justify-start":"justify-center"} ${pathname === link.href ? "bg-white text-green-400":"bg-transparent text-white"}`}>
+                              <div className="w-8 h-8 relative">
+                                  <Image
+                                      src={link.icon.src}
+                                      alt="link icon"
+                                      fill
+                                      className="object-contain object-center"
+                                  />
+                              </div>
+                              <span className={`font-bold capitalize group-hover:text-green-400 transition-all duration-300 ease-in-out ${isOpen ? "visible":"hidden"} ${pathname === link.href ? " text-green-400":"text-white"}`}>{link.label}</span>
+                          </Link>
+                      ))}
+                  </div>
+                </div>
+            </aside>
         </>
     )
 }

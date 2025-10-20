@@ -6,7 +6,7 @@ export default function DashBoard(){
     return(
         <>
             <Navbar/>
-            <section className={`p-4 transition-all duration-300 lg:pt-18 md:pt-16 ${isOpen ? 'md:ml-[300px]' : 'md:ml-0'}`}>
+            <section className={`p-4 transition-all duration-300 lg:pt-18 md:pt-16 ${isOpen ? 'md:ml-[300px]' : 'md:ml-[50px]'}`}>
                 <h1 className="text-black">home page</h1>
             </section>
         </>
