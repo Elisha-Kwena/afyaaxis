@@ -2,19 +2,21 @@
 import { useSidebar } from "@/contexts/SidebarContext";
 import Navbar from "@/components/navigation/Navbar";
 import Image from "next/image";
+import Link from "next/link";
+import { shortcuts } from "@/constants/Dashboard";
 export default function DashBoard() {
   const { isOpen } = useSidebar();
   return (
     <>
       <Navbar />
       <section
-        className={`p-2 transition-all h-screen bg-white-200 duration-300 lg:pt-18 md:pt-16 ${
-          isOpen ? "md:ml-[300px]" : "md:ml-0"
+        className={`p-1 transition-all h-screen bg-white-200 duration-300 pt-[59px] ${
+          isOpen ? "md:ml-[300px]" : "md:ml-[55px]"
         }`}
       >
-        <div className="flex flex-col  md:flex-row  h-70 p-1 w-full ">
-          <div className=" flex bg-green-500 shadow-lg mx-auto w-2/3 justify-around rounded">
-            <div className="p-4 w-1/2  ">
+        <div className="flex flex-col  md:flex-row  p-1 w-full ">
+          <div className=" flex items-center justify-between bg-green-500 h-full shadow-lg mx-auto w-2/3 rounded px-4">
+            <div className="p-2 w-1/2  ">
               <h1 className="text-black font-bold text-4xl mb-2  ">
                 WELCOME BACK !
               </h1>
@@ -25,114 +27,44 @@ export default function DashBoard() {
             </div>
 
             {/* Image Section */}
-            <div className="relative ">
-              <img
+            <div className="p-2 ">
+              <div className="w-[250px] h-[250px] rounded-full overflow-hidden relative">
+                <Image
                 src="/images/user.jpg"
                 alt="profile image"
-                className=" border-black rounded-full w-60 h-60 mx-auto mt-3"
+                fill
+                className="object-top object-cover"
               />
+              </div>
             </div>
           </div>
-
           {/*calender*/}
-
-          <div className="bg-gray-200 shadow-lg w-1/3 h-70 rounded ml-1 ">
-            <img
-              src="/images/calendar.jpg"
-              alt="calendar"
-              className="w-full h-70"
-            />
+          <div className="bg-gray-200 shadow-lg w-1/3  rounded ml-1  ">
+            <div className="w-full [h-250px] relative">
+               
+            </div>
           </div>
         </div>
 
         {/*cards*/}
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-2 mt-4">
-          <div className="bg-white shadow-md rounded flex justify-start p-4">
-            {/* Card Content */}
-            <div>
-              <img
-                src="/icons/appointment.png"
-                alt="Appointments Icon"
-                className="w-8 h-8 mb-2 "
-              />
-            </div>
-            <div>
-              <h2 className=" text-black text-xl p-2 font-semibold mb-2">
-                Book and appointment
-              </h2>
-            </div>
-          </div>
-          <div className="bg-white shadow-md flex justify-start rounded p-4">
-            {/* Card Content */}
-            <div>
-              <img
-                src="/icons/symptoms checker.png"
-                alt="Appointments Icon"
-                className="w-8 h-8 mb-2"
-              />
-            </div>
-            <div>
-              <h2 className=" text-black p-2 text-xl font-semibold mb-2">
-                symptoms checker
-              </h2>
-            </div>
-          </div>
-          <div className="bg-white flex justify-start shadow-md rounded p-4">
-            <div>
-              <img
-                src="/icons/healthrecords.png"
-                alt="Appointments Icon"
-                className="w-8 h-8 mb-2"
-              />
-            </div>
-            <div>
-              <h2 className=" text-black p-2 text-xl font-semibold mb-2">
-                Health Records
-              </h2>
-            </div>
-          </div>
-          <div className="bg-white flex justify-start shadow-md rounded p-4">
-            <div>
-              <img
-                src="/icons/chats.png"
-                alt="Appointments Icon"
-                className="w-8 h-8 mb-2"
-              />
-            </div>
-            <div>
-              <h2 className=" text-black p-2 text-xl font-semibold mb-2">
-                Message Doctor
-              </h2>
-            </div>
-          </div>
-          <div className="bg-white flex justify-start shadow-md rounded p-4">
-            <div>
-              <img
-                src="/icons/billing.png"
-                alt="Appointments Icon"
-                className="w-8 h-8 mb-2"
-              />
-            </div>
-            <div>
-              <h2 className=" text-black p-2 text-xl font-semibold mb-2">
-                Paybill
-              </h2>
-            </div>
-          </div>
-          <div className="bg-white flex justify-start shadow-md rounded p-4">
-            <div>
-              <img
-                src="/icons/medications.png"
-                alt="Appointments Icon"
-                className="w-8 h-8 mb-2"
-              />
-            </div>
-            <div>
-              <h2 className=" text-black p-2 text-xl font-semibold mb-2">
-                Medications
-              </h2>
-            </div>
-          </div>
+        <div className={`grid grid-cols-1 gap-2 mt-4 ${isOpen?"md:grid-cols-4 lg:grid-cols-4":"md:grid-cols-5 lg:grid-cols-5"}`}>
+            {shortcuts.map((link,index)=>(
+                <Link key={index} href={link.href} className="bg-white shadow-md rounded flex justify-start p-4">
+                    {/* Card Content */}
+                        <div className="w-8 h-8 relative">
+                            <Image
+                                src={link.icon.src}
+                                alt={link.label}
+                                fill
+                                className="object-contain object-center"
+                            />
+                        </div>
+                        <div>
+                            <h2 className=" text-black text-xl p-2 font-semibold mb-2">{link.label}</h2>
+                        </div>
+                </Link>
+            ))}
+
         </div>
       </section>
     </>
