@@ -1,11 +1,13 @@
 import Image from "next/image"
 import { useSidebar } from "@/contexts/SidebarContext"
 export default function ToggleButton(){
-    const {isOpen,toggleSidebar} = useSidebar()
+    const {toggleSidebar} = useSidebar()
     return(
         <>
-        <button className="flex items-center justify-center cursor-pointer">
-            <div className="w-12 h-12 relative">
+        <button
+        onClick={toggleSidebar}
+        className="flex items-center justify-center cursor-pointer">
+            <div className="w-10 h-10 relative">
                 <Image
                     src="/icons/dashboard.png"
                     alt="dashboard-icon"
