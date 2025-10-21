@@ -28,12 +28,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
-      ><main className="bg-white w-full h-screen">
+      >
+        <main className="bg-white w-full min-h-screen">
           <SidebarProvider>
-              <Sidebar/>
-              {children}
+            <Sidebar />
+            {children}
           </SidebarProvider>
-      </main>
+        </main>
       </body>
     </html>
   );
