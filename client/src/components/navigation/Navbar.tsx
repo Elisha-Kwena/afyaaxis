@@ -3,7 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 import ToggleButton from "../ui/ToggleSidebar";
 import { useSidebar } from "@/contexts/SidebarContext";
-export default function Navbar() {
+
+interface navbarprops{
+  title:string;
+}
+export default function Navbar({title}:navbarprops) {
   const { isOpen } = useSidebar();
   return (
     <>
@@ -16,7 +20,7 @@ export default function Navbar() {
           <div className="flex items-center justify-start gap-8">
             <div className="flex items-center justify-start gap-2">
               <ToggleButton />
-              <h1 className="font-bold text-[24px] text-black">Dashboard</h1>
+              <h1 className="font-bold text-[24px] text-black">{title}</h1>
             </div>
             <Link
               href=""
