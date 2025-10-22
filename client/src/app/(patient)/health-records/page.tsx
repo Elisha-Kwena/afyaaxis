@@ -11,7 +11,7 @@ export default function Records() {
     <>
       <Navbar title={title} />
       <section
-        className={`p-1 transition-all min-h-screen  bg-white-200 duration-300 pt-[59px] ${
+        className={`p-1 transition-all min-h-screen  bg-gray-100 duration-300 pt-[59px] ${
           isOpen ? "md:ml-[300px]" : "md:ml-[55px]"
         }`}
       >
@@ -20,7 +20,7 @@ export default function Records() {
             isOpen ? "left-[305px]" : "left-[60px]"
           }`}
         >
-          <div className="w-full px-1 bg-slate-200 h-full flex flex-row ">
+          <div className="w-full px-1 h-full flex flex-row ">
             <div className="w-2/3 h-full pr-1">
               <div className="flex items-center justify-between p-2">
                 <div className="">
@@ -39,8 +39,8 @@ export default function Records() {
               </div>
 
               {/*cards*/}
-              <div className="flex items-center justify-around m-2 gap-2">
-                <div className="bg-white w-1/2 h-25 rounded ">
+              <div className="w-full grid grid-cols-3 gap-2 bg-red-500">
+                <div className="bg-white  rounded ">
                   <div>
                     <div className="flex justify-center  p-2 items-center ">
                       <div className="w-10 h-10 relative ">
@@ -61,7 +61,7 @@ export default function Records() {
                   </div>
                   <div></div>
                 </div>
-                <div className="bg-white w-1/2 h-25 rounded ">
+                <div className="bg-white rounded ">
                   <div>
                     <div className="flex justify-center  p-2 items-center ">
                       <div className="w-10 h-10 relative ">
@@ -81,7 +81,7 @@ export default function Records() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-white w-1/2  h-25 rounded ">
+                <div className="bg-white rounded ">
                   <div>
                     <div className="flex justify-center  p-2 items-center ">
                       <div className="w-10 h-10 relative ">

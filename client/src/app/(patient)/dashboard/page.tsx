@@ -16,7 +16,7 @@ export default function DashBoard() {
           isOpen ? "md:ml-[300px]" : "md:ml-[55px]"
         }`}
       >
-<<<<<<< HEAD
+
         <div className={`h-screen pb-[60px] overflow-scroll fixed right-0 transition-all duration-700 ease-in-out ${isOpen?"left-[305px]":"left-[60px]"}`}>
         <div className="flex flex-col  md:flex-row  p-1 w-full ">
           <div className=" flex items-center justify-between bg-green-500 h-full shadow-lg mx-auto w-2/3 rounded px-4">
@@ -49,8 +49,6 @@ export default function DashBoard() {
         </div>
 
         {/*cards*/}
-=======
->>>>>>> 9d82bdd7f0a77bdb5da8a9923735fcc72b52a1a5
         <div
           className={`h-screen pb-[60px] overflow-scroll fixed right-0 transition-all duration-700 ease-in-out ${
             isOpen ? "left-[305px]" : "left-[60px]"
@@ -245,6 +243,7 @@ export default function DashBoard() {
               </button>
             </div>
           </div>
+        </div>
         </div>
       </section>
     </>

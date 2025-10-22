@@ -282,13 +282,13 @@ export default function AppointmentGrid(){
                                 </div>
                                 <div className="w-full flex items-center justify-start gap-3 mt-4">
                                     {appointment.type.toLocaleLowerCase() === "telehealth" ? (
-                                        <button className={`rounded-md text-center text-white p-2 flex items-center justify-center gap-2 ${backgroundFull} px-4`}>
+                                        <button className={`rounded-md text-center text-white p-2 text-sm flex items-center justify-center gap-2 ${backgroundFull} px-4`}>
                                             <VideoCameraFrontRoundedIcon className="text-white"/>
                                             Join Call </button>
                                     ):(
-                                        <button className={`rounded-md text-center text-white p-2 flex items-center justify-center gap-2 ${backgroundFull} px-4`}>
+                                        <button className={`rounded-md text-center text-white p-2 flex text-sm items-center justify-center gap-2 ${backgroundFull} px-4`}>
                                             <AssistantDirectionRoundedIcon className="text-white"/>
-                                            Get Directions </button>
+                                            Directions </button>
                                     )}
                                     <button className="rounded-md text-center text-white p-2 flex items-center justify-center gap-2 bg-yellow-400 px-4">Reschedule </button>
                                     <button className="rounded-md text-center text-white p-2 flex items-center justify-center gap-2 bg-gray-600 px-4">Cancel</button>
