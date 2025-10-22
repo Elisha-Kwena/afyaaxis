@@ -20,7 +20,7 @@ export default function Navbar({title}:navbarprops) {
           <div className="flex items-center justify-start gap-8">
             <div className="flex items-center justify-start gap-2">
               <ToggleButton />
-              <h1 className="font-bold text-[24px] text-black">{title}</h1>j2
+              <h1 className="font-bold text-[24px] text-black">{title}</h1>
             </div>
             <Link
               href=""

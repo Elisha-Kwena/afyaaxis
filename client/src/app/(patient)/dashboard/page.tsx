@@ -12,12 +12,12 @@ export default function DashBoard() {
     <>
       <Navbar title={title}/>
       <section
-        className={`p-1 transition-all min-h-screen  bg-white-200 duration-300 mt-[59px] overflow-hidden relative ${
+        className={`p-1 transition-all min-h-screen  bg-gray-100 duration-300 mt-[59px] overflow-hidden relative ${
           isOpen ? "md:ml-[300px]" : "md:ml-[55px]"
         }`}
       >
         <div className={`h-screen pb-[60px] overflow-scroll fixed right-0 transition-all duration-700 ease-in-out ${isOpen?"left-[305px]":"left-[60px]"}`}>
-                  <div className="flex flex-col  md:flex-row  p-1 w-full ">
+        <div className="flex flex-col  md:flex-row  p-1 w-full ">
           <div className=" flex items-center justify-between bg-green-500 h-full shadow-lg mx-auto w-2/3 rounded px-4">
             <div className="p-2 w-1/2  ">
               <h1 className="text-black font-bold text-4xl mb-2  ">
