@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`flex rounded-md z-100 h-[50px] p-2 fixed top-2  right-1 shadow bg-white transition-all duration-300 ease-in-out ${
+        className={`flex rounded-md z-100 h-[50px] p-2 fixed top-2  right-1 shadow bg-white transition-all duration-700 ease-in-out ${
           isOpen ? "left-[306px]" : "left-[61px]"
         }`}
       >

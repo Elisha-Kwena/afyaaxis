@@ -11,11 +11,12 @@ export default function DashBoard() {
     <>
       <Navbar />
       <section
-        className={`p-1 transition-all min-h-screen  bg-white-200 duration-300 pt-[59px] ${
+        className={`p-1 transition-all min-h-screen  bg-white-200 duration-300 mt-[59px] overflow-hidden relative ${
           isOpen ? "md:ml-[300px]" : "md:ml-[55px]"
         }`}
       >
-        <div className="flex flex-col  md:flex-row  p-1 w-full ">
+        <div className={`h-screen pb-[60px] overflow-scroll fixed right-0 transition-all duration-700 ease-in-out ${isOpen?"left-[305px]":"left-[60px]"}`}>
+                  <div className="flex flex-col  md:flex-row  p-1 w-full ">
           <div className=" flex items-center justify-between bg-green-500 h-full shadow-lg mx-auto w-2/3 rounded px-4">
             <div className="p-2 w-1/2  ">
               <h1 className="text-black font-bold text-4xl mb-2  ">
@@ -47,7 +48,7 @@ export default function DashBoard() {
 
         {/*cards*/}
         <div
-          className={`grid grid-cols-1 gap-2 mt-4 ${
+          className={`grid grid-cols-1 gap-2 mt-4 px-1 ${
             isOpen
               ? "md:grid-cols-4 lg:grid-cols-4"
               : "md:grid-cols-5 lg:grid-cols-5"
@@ -76,20 +77,16 @@ export default function DashBoard() {
             </Link>
           ))}
         </div>
-        <div className="pl-1">
+        <div className="w-full px-1">
           {/* Upcoming Appointments Section */}
           <div className="mt-5 ">
-            <h1 className="text-black text-2xl p-2 font-semibold">
-              Upcoming Appointments
-            </h1>
+            <h1 className="text-black text-2xl font-semibold">Upcoming Appointments</h1>
           </div>
           <div className="bg-white shadow rounded flex  justify-between pb-1 flex-col">
             {/* Appointment List Placeholder */}
             <div className="w-full flex items-center justify-between  ">
               <div>
-                <h1 className="text-black text-lg p-1 font-medium ">
-                  Dr. sarah lee , cardiologist - oct 20,2025 3:00 PM (virtual){" "}
-                </h1>
+                <h1 className="text-black text-lg p-1 font-medium ">Dr. sarah lee , cardiologist - oct 20,2025 3:00 PM (virtual){" "}</h1>
               </div>
               <div className="flex  p-4 items-center font-bold ">
                 <Link href="#">
@@ -103,7 +100,7 @@ export default function DashBoard() {
                 </div>
               </div>
             </div>
-            <div className="w-full mt-2">
+            <div className="w-full mt-2 p-2">
               <button className="bg-black text-white py-2 px-4 rounded-full  shadow-md hover:bg-blue-600 mt-3">
                 View all Appointments
               </button>
@@ -112,13 +109,10 @@ export default function DashBoard() {
         </div>
 
         {/* health SUMMARY*/}
-        <div className=" flex w-full items-start mt-3">
-          <div className=" w-2/3 shadow  ml-2 rounded ">
-            <div className="flex flex-col  w-full p-2  mt-2 bg-white   ">
-              <h1 className="text-black font-bold  text-2xl p-3">
-                health summary
-              </h1>
-
+        <div className=" flex w-full items-start justify-between mt-3 px-1">
+          <div className=" w-2/3 shadow rounded-md bg-white ">
+            <div className="flex flex-col  w-full p-2  mt-2 ">
+              <h1 className="text-black font-bold  text-2xl capitalize">health summary</h1>
               <div
                 className={`grid w-full grid-cols-1 gap-2 mt-4 mb-4 ${
                   isOpen
@@ -160,9 +154,7 @@ export default function DashBoard() {
           <div className=" w-1/2 ml-2">
             <div className="bg-white shadow rounded p-4 ">
               <div>
-                <h1 className="text-black font-bold text-2xl underline mb-3 ">
-                  Recent Activities{" "}
-                </h1>
+                <h1 className="text-black font-bold text-2xl mb-3 ">Recent Activities</h1>
               </div>
               <ul className="list-disc pl-5">
                 <div className="border border-black p-2 flex justify-between items-center">
@@ -189,14 +181,15 @@ export default function DashBoard() {
         </div>
         <div>
           {/* health tips */}
-          <h2 className="text-black font-bold text-2xl p-3">Health Tips</h2>
+        <div className="w-full px-1 mt-3">
+          <h2 className="text-black font-bold text-2xl">Health Tips</h2>
           <div className="bg-white shadow rounded p-4 mb-4">
             <h3 className="text-black mb-2  ">
               Stay hydrated by drinking at least 8 glasses of water daily.
             </h3>
             <p className="underline text-blue-500">read more</p>
           </div>
-
+        </div>
           {/*EMERGENCY BUTTON*/}
           <div className="flex justify-center mb-4">
             <button className="bg-red-500 w-full text-white py-6 px-4 rounded mx-1 my-2 shadow-md hover:bg-red-600">
@@ -204,6 +197,8 @@ export default function DashBoard() {
             </button>
           </div>
         </div>
+        </div>
+
       </section>
     </>
   );

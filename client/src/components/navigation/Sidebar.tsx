@@ -9,7 +9,7 @@ export default function Sidebar(){
     const pathname = usePathname()
     return(
         <>
-            <aside className={`fixed flex flex-col gap-1 top-1 rounded-md p-2 bg-green-500 left-1 bottom-1 text-white transform transition-all duration-500 ease-in-out ${isOpen ? 'translate-x-0 w-[300px]' : '-translate-x-full w-[55px]'} md:translate-x-0 z-20`}>
+            <aside className={`fixed flex flex-col gap-1 top-1 rounded-md p-2 bg-green-500 left-1 bottom-1 text-white transform transition-all duration-700 ease-in-out ${isOpen ? 'translate-x-0 w-[300px]' : '-translate-x-full w-[55px]'} md:translate-x-0 z-20`}>
               <div className="top w-full flex items-start justify-start gap-1">
                   <div className="w-16 h-16 relative flex items-cente">
                       <Image
