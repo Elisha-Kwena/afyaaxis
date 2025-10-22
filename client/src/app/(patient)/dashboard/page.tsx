@@ -6,10 +6,11 @@ import Link from "next/link";
 import { shortcuts } from "@/constants/Dashboard";
 import { healthSummaryCards } from "@/constants/Dashboard";
 export default function DashBoard() {
+  const title="Dashboard";
   const { isOpen } = useSidebar();
   return (
     <>
-      <Navbar />
+      <Navbar title={title}/>
       <section
         className={`p-1 transition-all min-h-screen  bg-white-200 duration-300 mt-[59px] overflow-hidden relative ${
           isOpen ? "md:ml-[300px]" : "md:ml-[55px]"
