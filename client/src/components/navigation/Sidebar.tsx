@@ -33,7 +33,7 @@ export default function Sidebar(){
                         <Link 
                           key={index} 
                           href={isUserProfile ? username : link.href} 
-                          className={`relative group w-full flex items-center gap-2 p-2 rounded-md hover:bg-white transition-all duration-300 ease-in-out ${isOpen?"justify-start":"justify-center"} ${
+                          className={`whitespace-nowrap overflow-hidden relative group w-full flex items-center gap-2 p-2 rounded-md hover:bg-white transition-all duration-300 ease-in-out ${isOpen?"justify-start":"justify-center"} ${
                             pathname === (isUserProfile ? "/" : link.href) 
                               ? "bg-white text-green-400" 
                               : "bg-transparent text-white"
