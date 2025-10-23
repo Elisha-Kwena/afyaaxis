@@ -35,7 +35,7 @@ export default function Appointment() {
                     </button>
                     <button
                     onClick={toggleDoctors}
-                    className="w-1/4 bg-blue-500 p-2 flex items-center justify-center gap-3 rounded-md px-6 cursor-pointer transition-all duration-300 ease-in-out hover:shadow-2xl">
+                    className={`w-1/4 bg-blue-500 p-2 flex items-center justify-center gap-3 rounded-md px-6 cursor-pointer transition-all duration-300 ease-in-out hover:shadow-2xl ${showDoctors ? "hidden":"visible"}`}>
                         <SearchIcon className="text-white text-[30px]!"/>
                         <span className="text-white font-serif font-bold capitalize">Find doctors</span>
                     </button>

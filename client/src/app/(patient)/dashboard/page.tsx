@@ -18,37 +18,6 @@ export default function DashBoard() {
       >
 
         <div className={`h-screen pb-[60px] overflow-scroll fixed right-0 transition-all duration-700 ease-in-out ${isOpen?"left-[305px]":"left-[60px]"}`}>
-        <div className="flex flex-col  md:flex-row  p-1 w-full ">
-          <div className=" flex items-center justify-between bg-green-500 h-full shadow-lg mx-auto w-2/3 rounded px-4">
-            <div className="p-2 w-1/2  ">
-              <h1 className="text-black font-bold text-4xl mb-2  ">
-                WELCOME BACK !
-              </h1>
-              <h2 className="py-2 px-2 text-3xl">Harrison Opondo</h2>
-              <button className="bg-black text-white py-2 px-4  rounded-full shadow-md hover:bg-blue-600 mt-4">
-                view your profile
-              </button>
-            </div>
-
-            {/* Image Section */}
-            <div className="p-2 ">
-              <div className="w-[250px] h-[250px] rounded-full overflow-hidden relative">
-                <Image
-                  src="/images/user.jpg"
-                  alt="profile image"
-                  fill
-                  className="object-top object-cover"
-                />
-              </div>
-            </div>
-          </div>
-          {/*calender*/}
-          <div className="bg-gray-200 shadow-lg w-1/3  rounded ml-1  ">
-            <div className="w-full [h-250px] relative"></div>
-          </div>
-        </div>
-
-        {/*cards*/}
         <div
           className={`h-screen pb-[60px] overflow-scroll fixed right-0 transition-all duration-700 ease-in-out ${
             isOpen ? "left-[305px]" : "left-[60px]"

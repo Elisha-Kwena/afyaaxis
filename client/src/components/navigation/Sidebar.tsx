@@ -65,7 +65,7 @@ export default function Sidebar(){
                   <div className="w-full flex flex-col gap-1">
                       {navbarlinks.slice(10).map((link,index)=>(
                           <Link key={index} href={link.href} className={`relative group w-full flex items-center gap-2 p-2 rounded-md hover:bg-white transition-all duration-300 ease-in-out ${isOpen?"justify-start":"justify-center"} ${pathname === link.href ? "bg-white text-green-400":"bg-transparent text-white"}`}>
-                              <div className="w-8 h-8 relative">
+                              <div className="w-6 h-6 relative">
                                   <Image
                                       src={link.icon.src}
                                       alt="link icon"
