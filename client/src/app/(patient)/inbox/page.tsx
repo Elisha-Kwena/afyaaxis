@@ -36,8 +36,8 @@ export default function InboxPage() {
 
               <div>
                 {/*notifications*/}
-                <div className="rounded-full p-2 bg-white">
-                  <h1>3</h1>
+                <div className="rounded-full p-1 bg-green-400 mb-1 h-8 w-8 text center">
+                  <h1 className="text-center">3</h1>
                 </div>
               </div>
             </div>
