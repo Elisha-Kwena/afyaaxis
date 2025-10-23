@@ -268,7 +268,7 @@ export default function AppointmentGrid(){
                         }
                         return(
                             <div key={index} className={`w-full border-l-4 p-4 flex flex-col gap-2 bg-white rounded-md ${border}`}>
-                                <div className="w-full flex items-start md:items-center flex-col md:flex-row md:justify-between justify-start ">
+                                <div className="w-full flex-1 flex items-start flex-col  md:justify-between justify-start ">
                                     <div className="flex flex-col gap-2">
                                         <h1 className="font-bold text-xl text-black">{appointment.doctor.name}</h1>
                                         <div className="w-full flex items-center justify-start gap-2">
@@ -278,7 +278,7 @@ export default function AppointmentGrid(){
                                         </div>
                                         <span className={`text-sm rounded-full text-center p-3 py-2 ${background} ${text}`}>{appointment.type}</span>
                                     </div>
-                                    <div className="text-sm text-gray-500">{appointment.reason}</div>
+                                    <div className="text-sm text-gray-500 mt-2">{appointment.reason}</div>
                                 </div>
                                 <div className="w-full flex items-center justify-start gap-3 mt-4">
                                     {appointment.type.toLocaleLowerCase() === "telehealth" ? (
