@@ -31,15 +31,11 @@ export default function Records() {
                     Your health data is summarized here.
                   </h4>
                 </div>
-                <div>
-                  <button className=" bg-white py-2 px-5 rounded-full">
-                    filter
-                  </button>
-                </div>
+                <div></div>
               </div>
 
               {/*cards*/}
-              <div className="w-full grid grid-cols-3 gap-2 bg-red-500">
+              <div className="w-full grid grid-cols-3 gap-2 ml-2">
                 <div className="bg-white  rounded ">
                   <div>
                     <div className="flex justify-center  p-2 items-center ">
@@ -115,58 +111,58 @@ export default function Records() {
                 </div>
                 <div>
                   <div className="flex justify-around p-2">
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Tue</h4>
                       <h2>13</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Wed</h4>
                       <h2>14</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Thur</h4>
                       <h2>15</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Fri</h4>
                       <h2>16</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Sat</h4>
                       <h2>17</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black bg-blue-400">
+                    <div className="p-1 w-10 rounded text-center border border-black bg-blue-400">
                       <h4>Sun</h4>
                       <h2>18</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Mon</h4>
                       <h2>19</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Tue</h4>
                       <h2>20</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Wed</h4>
                       <h2>21</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Thur</h4>
                       <h2>22</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Fri</h4>
                       <h2>23</h2>
                     </div>
-                    <div className="p-1 w-10 rounded border border-black ">
+                    <div className="p-1 w-10 rounded text-center border border-black ">
                       <h4>Sun</h4>
                       <h2>24</h2>
                     </div>
                   </div>
-                  <div className="flex  w-full justify-around p-2">
-                    <div className="rounded w-1/2 flex justify-around items-center h-30 border border-green-500 rounded mt-2 mr-2">
-                      <div className="relative h-25 w-25 rounded-full overflow-hidden">
+                  <div className="flex  w-full justify-start p-2">
+                    <div className="rounded w-1/2 flex justify-start items-center h-30 border border-green-500 rounded mt-2 mr-2 ">
+                      <div className="relative h-25 w-25 rounded-md ml-2 mr-2 overflow-hidden">
                         <Image
                           src="/images/doc2.jpg"
                           alt="blood sugar image"
@@ -183,8 +179,8 @@ export default function Records() {
                       </div>
                     </div>
 
-                    <div className="rounded w-1/2 flex justify-around items-center h-30 border border-blue-500 rounded mt-2 mr-2">
-                      <div className="relative h-25 w-25 rounded-full overflow-hidden">
+                    <div className="rounded w-1/2 flex justify-start items-center h-30 border border-blue-500 rounded mt-2 mr-2">
+                      <div className="relative h-25 w-25 ml-2 mr-2 rounded-md overflow-hidden">
                         <Image
                           src="/images/doc1.jpg"
                           alt="blood sugar image"
@@ -205,8 +201,10 @@ export default function Records() {
                   </div>
                 </div>
                 <div>
-                  <h2 className="font-bold text-lg">Checkup History</h2>
-                  <table className="w-full mt-4 table-auto border-collapse border border-slate-400 ">
+                  <h2 className="font-bold text-lg ml-2 mb-2">
+                    Checkup History
+                  </h2>
+                  <table className="w-39/40 mx-auto  table-auto border-collapse border border-slate-400 ">
                     <thead className="bg-gray-200">
                       <tr>
                         <th>Date</th>
@@ -215,38 +213,38 @@ export default function Records() {
                         <th>Specialization</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr className="border-b border-slate-400">
-                        <td>2023-10-16</td>
-                        <td>10:00 AM - 11:00 AM</td>
-                        <td>Dr. Harry Carter</td>
-                        <td>Dentist</td>
+                    <tbody className=" table-auto p-3">
+                      <tr className="border-b pl-3 border-slate-400">
+                        <td className="text-center">2023-10-16</td>
+                        <td className="text-center">10:00 AM - 11:00 AM</td>
+                        <td className="text-center">Dr. Harry Carter</td>
+                        <td className="text-center">Dentist</td>
                       </tr>
                       <tr className="border-b border-slate-400">
+                        <td className="text-center">2023-10-17</td>
+                        <td className="text-center">12:00 PM - 1:00 PM</td>
+                        <td className="text-center">Dr. Elisha Karter</td>
+                        <td className="text-center">Cardiologist</td>
+                      </tr>
+                      <tr className="border-b border-slate-400">
+                        <td className="text-center">2023-10-17</td>
+                        <td className="text-center">12:00 PM - 1:00 PM</td>
+                        <td className="text-center">Dr. Elisha Karter</td>
+                        <td className="text-center">Cardiologist</td>
+                      </tr>
+                      <tr className="border-b text-center border-slate-400">
                         <td>2023-10-17</td>
                         <td>12:00 PM - 1:00 PM</td>
                         <td>Dr. Elisha Karter</td>
                         <td>Cardiologist</td>
                       </tr>
-                      <tr className="border-b border-slate-400">
+                      <tr className="border-b text-center border-slate-400">
                         <td>2023-10-17</td>
                         <td>12:00 PM - 1:00 PM</td>
                         <td>Dr. Elisha Karter</td>
                         <td>Cardiologist</td>
                       </tr>
-                      <tr className="border-b border-slate-400">
-                        <td>2023-10-17</td>
-                        <td>12:00 PM - 1:00 PM</td>
-                        <td>Dr. Elisha Karter</td>
-                        <td>Cardiologist</td>
-                      </tr>
-                      <tr className="border-b border-slate-400">
-                        <td>2023-10-17</td>
-                        <td>12:00 PM - 1:00 PM</td>
-                        <td>Dr. Elisha Karter</td>
-                        <td>Cardiologist</td>
-                      </tr>
-                      <tr className="border-b border-slate-400">
+                      <tr className="border-b text-center border-slate-400">
                         <td>2023-10-17</td>
                         <td>12:00 PM - 1:00 PM</td>
                         <td>Dr. Elisha Karter</td>
@@ -271,14 +269,37 @@ export default function Records() {
                 <div className="flex items-center justify-center mt-4">
                   <div className="relative h-90 w-90 overflow-hidden">
                     <Image
-                      src="/images/heart.png"
+                      src="/images/heart1.png"
                       alt="heart image"
                       fill
                       className=" contain "
                     />
                   </div>
                 </div>
-                <div></div>
+                <div className="grid grid-cols-3 gap-1 text-center mt-4 p-2">
+                  <div className="shadow ">
+                    <h1 className="font-bold">Average</h1>
+                    <p>75 bpm</p>
+                  </div>
+                  <div className="shadow">
+                    <h1 className="font-bold">Max</h1>
+                    <p className="text-red-600">120 bpm</p>
+                  </div>
+                  <div className="shadow">
+                    <h1 className="font-bold">Min</h1>
+                    <p className="text-red-600">60 bpm</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="relative mx-auto h-40 w-90 overflow-hidden">
+                    <Image
+                      src="/images/stats.jpg"
+                      alt="stats image"
+                      fill
+                      className=" contain "
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
