@@ -208,22 +208,23 @@ export default function InboxPage() {
                       <div className="">
                         <div className="flex flex-col">
                           <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                            <div className="flex items-start space-x-2">
+                            <div className="flex items-start flex-col space-x-2">
                               <div className="bg-white p-3 rounded-lg shadow max-w-xs">
                                 <p className="text-sm text-gray-800">
                                   Good morning my headache is getting worse 😖?
                                 </p>
                               </div>
-                              <h1>1:05 pm</h1>
+                              <h1 className="mt-2 text-gray-400">1:05 pm</h1>
                             </div>
 
-                            <div className="flex items-end justify-end space-x-2">
-                              <div className="bg-blue-500 text-white p-3 rounded-lg shadow max-w-xs">
-                                <p className="text-sm">
+                            <div className="flex items-end flex-col justify-end space-x-2">
+                              <div className="bg-blue-500  text-white p-3 rounded-lg shadow max-w-xs">
+                                <p className="text-sm ">
                                   Good morning , Kindly come to the hospital for
                                   further Examination .
                                 </p>
                               </div>
+                              <h1 className="mt-2 text-gray-400">1:07 pm</h1>
                             </div>
                           </div>
                         </div>
